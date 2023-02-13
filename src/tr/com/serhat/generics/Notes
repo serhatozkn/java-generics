@@ -1,0 +1,18 @@
+Naming Conventions:
+-------------------
+E - Element (used extensively by the Java Collections Framework)
+K - Key
+N - Number
+T - Type
+V - Value
+S,U,V etc. - 2nd, 3rd, 4th types
+
+Generics and Subtyping:
+-----------------------
+
+Although Integer is a subtype of Number, List<Integer> is not a subtype of List<Number> and,
+in fact, these two types are not related. The common parent of List<Number> and List<Integer> is List<?>.
+
+But
+
+List<? extends Number> is parent type of List<? extends Integer>
