@@ -8,8 +8,10 @@ import java.util.Map;
 
 public class Inheritance {
 
-    // Don't forget that for Rectangle<Number> : Rectangle<Integer> isn't a subtype of Rectangle<Number>
+    // Don't forget that Rectangle<Integer> isn't a subtype of Rectangle<Number>
     // even-though Integer is subtype of class Number
+    // The only relation between Rectangle<Integer> and Rectangle<Number> is that;
+    // both classes parent is class Object.
     
     public static Number diagonalLengthOf(final Rectangle<Number> rectangle) {
         final double w = rectangle.getWidth().doubleValue();
@@ -31,14 +33,15 @@ public class Inheritance {
         final Rectangle<Integer> rectangleInt = new Rectangle<>();
         rectangle.setWidth(6);
         rectangle.setHeight(8);
-        // Compile time error since Rectangle<Integer> is not subclass of Rectangle<Number>
-        // Only relation between these two class are that; there parent class is Object class.
+
+        //****************************************************************
         // diagonalLengthOf(rectangleInt);
+        // The code line above will result to a compile time error
+        // since Rectangle<Integer> is not subclass of Rectangle<Number>.
+        //*****************************************************************
 
         // List<Integer> is subclass of Collection<Integer> -> Since the generic types are same
         final List<Integer> aList = List.of(1, 2, 3, 4, 5, 6, 7);
         System.out.println("Sum of list is: : "+ sum(aList));
-
     }
-
 }

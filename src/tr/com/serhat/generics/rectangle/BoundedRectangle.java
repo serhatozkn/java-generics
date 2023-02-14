@@ -15,7 +15,7 @@ public class BoundedRectangle<T extends Number> {
     }
 
     // For demonstration (not a sensible function)
-    // -> we can call functions of Number function
+    // -> we can call functions of Number function ( T -> Number )
     public double doubleArea() {
         return width.doubleValue() * height.doubleValue();
     }
